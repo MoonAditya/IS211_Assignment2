@@ -25,7 +25,7 @@ def processData(file_content='birthdays100.csv'):
             try:
                 person_Dob = re.sub(r'(\d{4})-(\d{1,2})-(\d{1,2})', '\\3-\\2-\\1', eachRow[2])
             except ValueError:
-                logging.getLogger("Assignment2")
+                logging.getLogger("assignment2")
                 logging.error("Error processing line #{} for ID #{}\n".format(eachRow[0], eachRow[0]))
 
             dict_list[person_id] = (person_Name, person_Dob)
